@@ -1,0 +1,106 @@
+/* Reset & Base */
+
+@font-face {
+    font-family: 'Merchant Copy';
+    src: url('../fonts/MerchantCopy.ttf') format('truetype');
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+  background-image: url('../images/bg.jpg');
+  background-repeat:repeat;
+  background-size:cover;
+  padding: 20px;
+}
+
+.leaderboard-container {
+  max-width: 800px;
+  margin: auto;
+  background: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+thead {
+  background-color: #4CAF50;
+  color: white;
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.back-button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  background-color: #45a049;
+}
+
+/* 🌐 Responsive Design */
+@media (max-width: 600px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+    width: 100%;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tbody tr {
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    background: #fff;
+  }
+
+  td {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 10px;
+    font-size: 14px;
+    border: none;
+  }
+
+  td::before {
+    content: attr(data-label);
+    font-weight: bold;
+  }
+}

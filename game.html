@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Guess the Number - Game</title>
+  <link rel="stylesheet" href="css/gameStyle.css" />
+</head>
+<body>
+  <div class="main-container">
+    <div id="welcomeTitle" class="title">Welcome, <span id="playerName">Player</span>!</div>
+    <div id="rangePrompt" class="subtitle">Choose your range</div>
+
+    <div id="rangeInputs" class="range-inputs">
+      <input type="number" id="minRange" placeholder="Enter Min"/>
+      <input type="number" id="maxRange" placeholder="Enter Max"/>
+    </div>
+
+    <button id="startGame" class="btn center-btn" disabled>Start Game</button>
+
+    <!-- Game content appears here after game starts -->
+    <div id="gamePanel" class="hidden">
+        <div id="gameInfo" class="subtitle"></div>
+        <div class="timeContainer">
+            <p id="timeElapsed">Time elapsed: 00</p>
+        </div>
+      <div id="feedbackMessage" class="feedback-text"></div>
+
+      <input type="number" id="guessInput" class="guess-input" placeholder="Enter your guess" />
+      <div class="action-buttons">
+        <button id="guessBtn" class="btn guess-btn">Guess</button>
+        <button id="restartBtn" class="btn restart-btn">Restart</button>
+      </div>
+
+      <div id="hintSection" class="hidden">Hint will appear here if 30 seconds pass.</div>
+    </div>
+
+    <div id="submit-score-container" style="display: none;">
+        <label id="checkbox-text" for="submit-score-checkbox">
+            <input type="checkbox" id="submit-score-checkbox">
+            Do you want to submit your score to the leaderboard? (Includes Number of tries, range selected, time elapsed)
+        </label>
+        <br>
+        <button id="submit-score" disabled>Submit Score</button>
+    </div>
+
+  </div>
+
+  <!-- Leaderboard and Feedback Buttons -->
+  <div class="footer-buttons">
+    <img src="images/feedback.png" alt="Feedback" class="icon-btn" id="feedbackBtn"/>
+    <img src="images/leaderboard.png" alt="Leaderboard" class="icon-btn" id="leaderboardBtn"/>
+  </div>
+
+</body>
+<script src="js/main.js"></script>
+<script src="js/main2.js"></script>
+</html>

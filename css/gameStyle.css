@@ -1,0 +1,195 @@
+/* Main layout */
+
+@font-face {
+    font-family: 'Merchant Copy';
+    src: url('../fonts/MerchantCopy.ttf') format('truetype');
+}
+
+body {
+    margin: 0;
+    font-family: 'Merchant Copy', sans-serif;
+    background: #f4f4f4;
+    background-image: url('../images/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+  }
+  
+  /* Game container */
+  .main-container {
+    background-color: rgba(255, 242, 242, 0.768);
+    width: 80%;
+    height: auto;
+    margin-top: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content:space-evenly;
+    border-radius: 10px;
+  }
+  
+  /* Title styling */
+  .title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: black;
+  }
+  
+  /* Subtitle styling */
+  .subtitle {
+    font-size: 1.7rem;
+    margin-top: 25px;
+    color: black;
+  }
+  
+  /* Range input styling */
+  .range-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 15px 0;
+  }
+  
+  .range-inputs input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 3px solid green;
+    border-radius: 5px;
+    background-color: white;
+  }
+  
+  /* Buttons */
+  .btn {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+  
+  .center-btn {
+    align-self: center;
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .restart-btn {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .guess-btn {
+    background-color: #2196F3;
+    color: white;
+  }
+  
+  /* Guess input box */
+  .guess-input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #333;
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 100%;
+  }
+  
+  /* Feedback and Leaderboard */
+  .footer-buttons {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    height: 30%;
+    gap : 20%;
+    justify-content: space-evenly;
+    margin-bottom: 15px;
+  }
+  
+  .icon-btn {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+  }
+  
+  /* Feedback message */
+  .feedback-text {
+    margin-top: 20px;
+    font-size: 1.2rem;
+  }
+  
+  /* Hidden utility */
+  .hidden {
+    display: none;
+  }
+  
+  /* Action buttons (Guess + Restart) */
+  .action-buttons {
+    display: flex;
+    width : 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 15px;
+  }
+
+/*HintSection*/ 
+#hintSection{
+    font-size : 1.5rem; 
+    text-align : center;
+    margin-top : 30px;
+}
+
+/*Feedback*/
+.feedback-text{
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+/*Time*/
+.timeContainer p{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width:100%;
+    font-size: 3rem; 
+    text-align : center;
+}
+
+/*Score submitter*/
+#submit-score-container {
+    margin-top: 35px;
+    text-align: center;
+}
+
+#submit-score-checkbox {
+    margin-right: 10px;
+}
+
+#submit-score {
+    margin-top : 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+#submit-score:enabled {
+    opacity: 1;
+    cursor: pointer;
+}
+
+#submit-score:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+#checkbox-text{
+    font-size : 1.5rem;
+}
